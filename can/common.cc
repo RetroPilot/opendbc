@@ -69,6 +69,7 @@ unsigned int chrysler_checksum(unsigned int address, uint64_t d, int l) {
 
 // Static lookup table for fast computation of CRC8 poly 0x2F, aka 8H2F/AUTOSAR
 uint8_t crc8_lut_8h2f[256];
+uint8_t crc8_lut_d5[256];
 
 void gen_crc_lookup_table(uint8_t poly, uint8_t crc_lut[]) {
   uint8_t crc;
@@ -90,6 +91,7 @@ void init_crc_lookup_tables() {
   // At init time, set up static lookup tables for fast CRC computation.
 
   gen_crc_lookup_table(0x2F, crc8_lut_8h2f);    // CRC-8 8H2F/AUTOSAR for Volkswagen
+  gen_crc_lookup_table(0xD5, crc8_lut_d5);      // CRC-8 for pedal
 }
 
 unsigned int volkswagen_crc(unsigned int address, uint64_t d, int l) {
@@ -190,6 +192,16 @@ unsigned int pedal_checksum(uint64_t d, int l) {
   return crc;
 }
 
+unsigned int ocelot_checksum(uint64_t d, int l) {
+  uint8_t crc = 0xFF; // Standard init value for CRC8
+
+  // CRC the payload, skipping over the first byte where the CRC lives.
+  for (int i = 1; i < l; i++) {
+    crc ^= (d >> (i*8)) & 0xFF;
+    crc = crc8_lut_d5[crc];
+  }
+  return crc;
+}
 
 uint64_t read_u64_be(const uint8_t* v) {
   return (((uint64_t)v[0] << 56)
