@@ -71,32 +71,32 @@ BO_ 526 BRAKE_COMMAND: 5 EON
  SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] "" IBST
 
 BO_ 512 GAS_COMMAND: 8 EON
- SG_ GAS_COMMAND : 7|16@0+ (0.159375,-75.555) [0|1] ""  PED
- SG_ GAS_COMMAND2 : 23|16@0+ (0.159375,-151.111) [0|1] ""  PED
- SG_ ENABLE : 39|1@0+ (1,0) [0|1] ""  PED
- SG_ COUNTER : 32|4@1+ (1,0) [0|15] ""  PED
- SG_ CHECKSUM : 40|8@1+ (1,0) [0|255] ""  PED
+ SG_ GAS_COMMAND : 8|16@1+ (0.159375,-75.555) [0|1] ""  PED
+ SG_ GAS_COMMAND2 : 24|16@1+ (0.159375,-151.111) [0|1] ""  PED
+ SG_ ENABLE : 47|1@1+ (1,0) [0|1] ""  PED
+ SG_ COUNTER : 40|4@1+ (1,0) [0|15] ""  PED
+ SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] ""  PED
 
 BO_ 513 GAS_SENSOR: 8 PED
- SG_ PED_GAS : 7|16@0+ (0.159375,-75.555) [0|1] ""  EON
- SG_ PED_GAS2 : 23|16@0+ (0.159375,-151.111) [0|1] ""  EON
- SG_ STATE : 39|4@0+ (1,0) [0|15] ""  EON
- SG_ COUNTER : 32|4@1+ (1,0) [0|15] ""  EON
- SG_ CHECKSUM : 40|8@1+ (1,0) [0|255] ""  EON
+ SG_ PED_GAS : 8|16@1+ (0.159375,-75.555) [0|1] ""  EON
+ SG_ PED_GAS2 : 24|16@1+ (0.159375,-151.111) [0|1] ""  EON
+ SG_ STATE : 44|4@1+ (1,0) [0|15] ""  EON
+ SG_ COUNTER : 40|4@1+ (1,0) [0|15] ""  EON
+ SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] ""  EON
 
 BO_ 870 CURRENT_STATE: 4 EON
- SG_ ENABLED : 0|1@0+ (1,0) [0|0] ""  HIM
- SG_ SET_SPEED : 15|8@0+ (1,0) [0|255] "mph"  HIM
- SG_ CURRENT_SPEED : 23|8@0+ (1,0) [0|255] "kph" IBST
- SG_ CHECKSUM : 24|8@1+ (1,0) [0|255] ""  HIM
+ SG_ ENABLED : 8|1@1+ (1,0) [0|0] ""  HIM
+ SG_ SET_SPEED : 16|8@1+ (1,0) [0|255] "mph"  HIM
+ SG_ CURRENT_SPEED : 24|8@1+ (1,0) [0|255] "kph" IBST
+ SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] ""  HIM
 
 BO_ 869 HIM_CTRLS: 3 HIM
- SG_ SPEEDDN_BTN : 3|1@0+ (1,0) [0|0] ""  EON
- SG_ SPEEDUP_BTN : 2|1@0+ (1,0) [0|0] ""  EON
- SG_ CANCEL_BTN : 1|1@0+ (1,0) [0|0] ""  EON
- SG_ SET_BTN : 0|1@0+ (1,0) [0|0] ""  EON
- SG_ STATE : 11|4@0+ (1,0) [0|15] ""  EON
- SG_ CHECKSUM : 16|8@1+ (1,0) [0|255] ""  EON
+ SG_ SPEEDDN_BTN : 11|1@1+ (1,0) [0|0] ""  EON
+ SG_ SPEEDUP_BTN : 10|1@1+ (1,0) [0|0] ""  EON
+ SG_ CANCEL_BTN : 9|1@1+ (1,0) [0|0] ""  EON
+ SG_ SET_BTN : 8|1@1+ (1,0) [0|0] ""  EON
+ SG_ STATE : 12|4@1+ (1,0) [0|15] ""  EON
+ SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] ""  EON
 
 BO_ 1059 TOYOTA_STEERING_ANGLE_SENSOR3: 1 TOYOTASAS
 
