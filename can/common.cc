@@ -91,7 +91,7 @@ void init_crc_lookup_tables() {
   // At init time, set up static lookup tables for fast CRC computation.
 
   gen_crc_lookup_table(0x2F, crc8_lut_8h2f);    // CRC-8 8H2F/AUTOSAR for Volkswagen
-  gen_crc_lookup_table(0xD5, crc8_lut_d5);      // CRC-8 for pedal
+  gen_crc_lookup_table(0x1D, crc8_lut_1d);      // CRC-8 SAE-j18650  for Retropilot
 }
 
 unsigned int volkswagen_crc(unsigned int address, uint64_t d, int l) {
@@ -198,8 +198,10 @@ unsigned int ocelot_checksum(uint64_t d, int l) {
   // CRC the payload, skipping over the first byte where the CRC lives.
   for (int i = 1; i < l; i++) {
     crc ^= (d >> (i*8)) & 0xFF;
-    crc = crc8_lut_d5[crc];
+    crc = crc8_lut_1d[crc];
   }
+  crc = crc ^ 0xFF; //final xor
+
   return crc;
 }
 
