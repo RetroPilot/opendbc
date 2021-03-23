@@ -150,7 +150,7 @@ cdef class CANDefine():
     self.dbc = dbc_lookup(dbc_name)
     if not self.dbc:
       raise RuntimeError("Can't lookup" + dbc_name)
-      
+
     num_vals = self.dbc[0].num_vals
 
     address_to_msg_name = {}

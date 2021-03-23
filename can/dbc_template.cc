@@ -37,7 +37,7 @@ const Signal sigs_{{address}}[] = {
       .type = SignalType::PEDAL_CHECKSUM,
       {% elif address in [512, 513] and sig.name == "COUNTER_PEDAL" %}
       .type = SignalType::PEDAL_COUNTER,
-      {% if checksum_type == "ocelot" and sig.name == "CHECKSUM" %}
+      {% elif checksum_type == "ocelot" and sig.name == "CHECKSUM" %}
       .type = SignalType::OCELOT_CHECKSUM,
       {% elif checksum_type == "ocelot" and sig.name == "COUNTER" %}
       .type = SignalType::OCELOT_COUNTER,

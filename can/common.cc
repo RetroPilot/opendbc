@@ -69,7 +69,7 @@ unsigned int chrysler_checksum(unsigned int address, uint64_t d, int l) {
 
 // Static lookup table for fast computation of CRC8 poly 0x2F, aka 8H2F/AUTOSAR
 uint8_t crc8_lut_8h2f[256];
-uint8_t crc8_lut_d5[256];
+uint8_t crc8_lut_1d[256];
 
 void gen_crc_lookup_table(uint8_t poly, uint8_t crc_lut[]) {
   uint8_t crc;
