@@ -198,7 +198,7 @@ unsigned int ocelot_checksum(uint64_t d, int l) {
   // CRC the payload, skipping over the first byte where the CRC lives.
   for (int i = 1; i < l; i++) {
     crc ^= (d >> (i*8)) & 0xFF;
-    crc = crc8_lut_1d[crc];
+    crc = crc8_lut_1d[crc] ^ crc << 8 ;
   }
   crc = crc ^ 0xFF; //final xor
 

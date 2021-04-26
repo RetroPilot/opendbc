@@ -106,7 +106,7 @@ uint64_t CANPacker::pack(uint32_t address, const std::vector<SignalPackValue> &s
       unsigned int chksm = chrysler_checksum(address, ReverseBytes(ret), message_lookup[address].size);
       ret = set_value(ret, sig, chksm);
     } else if (sig.type == SignalType::OCELOT_CHECKSUM) {
-      unsigned int chksm = ocelot_checksum(ret, message_lookup[address].size);
+      unsigned int chksm = ocelot_checksum(ReverseBytes(ret), message_lookup[address].size);
       ret = set_value(ret, sig, chksm);
     }
     else {

@@ -77,7 +77,7 @@ bool MessageState::parse(uint64_t sec, uint16_t ts_, uint8_t * dat) {
         return false;
       }
     } else if (sig.type == SignalType::OCELOT_CHECKSUM) {
-      if (ocelot_checksum(dat_be, size) != tmp) {
+      if (ocelot_checksum(dat_le, size) != tmp) {
         INFO("0x%X OCELOT CHECKSUM FAIL\n", address);
         return false;
       }
