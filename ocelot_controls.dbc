@@ -101,10 +101,14 @@ TorqueControl - use steer_torque
 RelativeControl - use steer_angle as relative target and steer_torque as feedforward. 
 SoftOff - ramp torque to 0 in 1s. 
 Command Off after SoftOff to re-enable control.";
+CM_ SG_ 558 COUNTER "Rolling counter";
+CM_ SG_ 558 CHECKSUM "8bit sum of all bytes and message id";
 CM_ SG_ 559 STEERING_ANGLE "Steering angle calculated from motor position sensor";
 CM_ SG_ 559 STEERING_SPEED "Steering speed calculated from motor position sensor";
 CM_ SG_ 559 STEERING_TORQUE "Motor torque calculated at the steering";
 CM_ SG_ 559 CONTROL_STATUS "Bitwise states: bit0 - sensored torque control is enabled, bit1 - sensor feedback enabled, bit2 - openloop soft off active, bit3 - internal closeloop mode enabled";
+CM_ SG_ 559 COUNTER "Rolling counter";
+CM_ SG_ 559 CHECKSUM "8bit sum of all bytes and message id";
 CM_ SG_ 559 TEMPERATURE "Motor PCB temperature";
 CM_ SG_ 559 DEBUG_STATES "Bitwise status. Refer to source";
 VAL_ 526 BRAKE_MODE 3 "Reserved" 2 "Position Control" 1 "Relative Control" 0 "Disengadged" ;
