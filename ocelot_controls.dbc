@@ -96,10 +96,10 @@ BO_ 559 STEERING_STATUS: 8 EPAS
 CM_ SG_ 558 STEER_TORQUE "Steering torque request";
 CM_ SG_ 558 STEER_ANGLE "Steering relative angle request for internal close loop controller";
 CM_ SG_ 558 STEER_MODE "Control mode request. 
-Off - instant 0 torque.
-TorqueControl - use steer_torque
-RelativeControl - use steer_angle as relative target and steer_torque as feedforward. 
-SoftOff - ramp torque to 0 in 1s. 
+Off - instant 0 torque,
+TorqueControl - use steer_torque,
+AngleControl - use steer_angle as relative target and steer_torque as feedforward
+SoftOff - ramp torque to 0 in 1s,
 Command Off after SoftOff to re-enable control.";
 CM_ SG_ 558 COUNTER "Rolling counter";
 CM_ SG_ 558 CHECKSUM "8bit sum of all bytes and message id";
@@ -114,5 +114,5 @@ CM_ SG_ 559 DEBUG_STATES "Bitwise status. Refer to source";
 VAL_ 526 BRAKE_MODE 3 "Reserved" 2 "Position Control" 1 "Relative Control" 0 "Disengadged" ;
 VAL_ 527 BRAKE_OK 1 "Yes" 0 "No" ;
 VAL_ 527 STATUS 5 "FAULT_TIMEOUT" 4 "FAULT_STARTUP" 3 "FAULT_SCE" 2 "FAULT_SEND" 1 "FAULT_BAD_CHECKSUM" 0 "NO_FAULT" ;
-VAL_ 558 STEER_MODE 0 "Off" 1 "TorqueControl" 2 "RelativeControl" 3 "SoftOff" ;
+VAL_ 558 STEER_MODE 0 "Off" 1 "TorqueControl" 2 "AngleControl" 3 "SoftOff" ;
 
