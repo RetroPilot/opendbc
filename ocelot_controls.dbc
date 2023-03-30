@@ -98,7 +98,7 @@ AngleControl - use steer_angle as relative target and steer_torque as feedforwar
 SoftOff - ramp torque to 0 in 1s,
 Command Off after SoftOff to re-enable control.";
 CM_ SG_ 558 COUNTER "Rolling counter";
-CM_ SG_ 558 CHECKSUM "8bit sum of all bytes and message id";
+CM_ SG_ 558 CHECKSUM "Calculated CRC8 per J1850 of the message bytes with first byte ignored";
 CM_ SG_ 559 STEERING_ANGLE "Steering angle calculated from motor position sensor";
 CM_ SG_ 559 STEERING_SPEED "Steering speed calculated from motor position sensor";
 CM_ SG_ 559 STEERING_TORQUE "Motor torque calculated at the steering";
