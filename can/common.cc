@@ -244,3 +244,21 @@ unsigned int hkg_can_fd_checksum(uint32_t address, const Signal &sig, const std:
 
   return crc;
 }
+
+unsigned int ocelot_checksum(uint32_t address, const Signal &sig, const std::vector<uint8_t> &d) {
+  uint8_t crc = 0xFF;
+  uint8_t poly = 0x1D; // standard crc8
+
+  // skip checksum byte
+  for (int i = 1; i < d.size(); i++) {
+    crc ^= d[i];
+    for (int j = 0; j < 8; j++) {
+      if ((crc & 0x80) != 0) {
+        crc = (uint8_t)((crc << 1) ^ poly);
+      } else {
+        crc <<= 1;
+      }
+    }
+  }
+  return crc;
+}

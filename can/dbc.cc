@@ -67,6 +67,8 @@ ChecksumState* get_checksum(const std::string& dbc_name) {
     s = new ChecksumState({8, -1, 7, -1, false, CHRYSLER_CHECKSUM, &chrysler_checksum});
   } else if (startswith(dbc_name, "comma_body")) {
     s = new ChecksumState({8, 4, 7, 3, false, PEDAL_CHECKSUM, &pedal_checksum});
+  } else if (startswith(dbc_name, "ocelot_")) {
+    s = new ChecksumState({8, 4, 0, 0, true, OCELOT_CHECKSUM, &ocelot_checksum});
   }
   return s;
 }
