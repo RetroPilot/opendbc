@@ -1,0 +1,143 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: XXX DSU HCU EPS IPAS CGW BGM
+
+BO_ 37 STEER_ANGLE_SENSOR: 8 XXX
+ SG_ STEER_ANGLE : 3|12@0- (1.5,0) [-500|500] "deg" XXX
+ SG_ STEER_RATE : 35|12@0- (1,0) [-2000|2000] "deg/s" XXX
+ SG_ STEER_FRACTION : 39|4@0- (0.1,0) [-0.7|0.7] "deg" XXX
+
+BO_ 176 WHEEL_SPEED_FRONT: 6 XXX
+ SG_ WHEEL_SPEED_FR : 23|16@0+ (1,0) [0|4095] "" XXX
+
+BO_ 178 WHEEL_SPEED_REAR: 6 XXX
+ SG_ WHEEL_SPEED_RL : 7|16@0+ (0.012,0) [0|1023] "km/h" XXX
+ SG_ WHEEL_SPEED_RR : 23|16@0+ (0.012,0) [0|1023] "km/h" XXX
+
+BO_ 180 SPEED: 8 XXX
+ SG_ ENCODER : 39|8@0+ (1,0) [0|255] "" XXX
+ SG_ SPEED : 47|16@0+ (0.01,0) [0|250] "km/h" XXX
+ SG_ CHECKSUM : 63|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 548 BRAKE_MODULE: 8 XXX
+ SG_ BRAKE_PRESSED : 5|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_PRESSURE : 43|12@0+ (1,0) [0|4047] "" XXX
+
+BO_ 705 GAS_PEDAL: 8 XXX
+ SG_ GAS_RELEASED : 3|1@0+ (1,0) [0|1] "" XXX
+ SG_ GAS_PEDAL : 55|8@0+ (0.005,0) [0|1] "" XXX
+
+BO_ 740 STEERING_LKA: 5 XXX
+ SG_ LKA_STATE : 31|8@0+ (1,0) [0|255] "" XXX
+ SG_ STEER_REQUEST : 0|1@0+ (1,0) [0|1] "" XXX
+ SG_ COUNTER : 6|6@0+ (1,0) [0|63] "" XXX
+ SG_ SET_ME_1 : 7|1@0+ (1,0) [0|1] "" XXX
+ SG_ STEER_TORQUE_CMD : 15|16@0- (1,0) [0|65535] "" XXX
+ SG_ CHECKSUM : 39|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 865 CLUTCH: 8 XXX
+ SG_ GAS_PEDAL_ALT : 23|8@0+ (0.005,0) [0|1] "" XXX
+ SG_ ACC_FAULTED : 32|1@0+ (1,0) [0|1] "" XXX
+ SG_ CLUTCH_RELEASED : 38|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 921 PCM_CRUISE_SM: 8 XXX
+ SG_ MAIN_ON : 4|1@0+ (1,0) [0|1] "" XXX
+ SG_ CRUISE_CONTROL_STATE : 11|4@0+ (1,0) [0|15] "" XXX
+ SG_ DISTANCE_LINES : 14|2@0+ (1,0) [0|3] "" XXX
+ SG_ TEMP_ACC_FAULTED : 15|1@0+ (1,0) [0|1] "" XXX
+ SG_ UI_SET_SPEED : 31|8@0+ (1,0) [0|255] "" XXX
+
+BO_ 951 ESP_CONTROL: 8 XXX
+ SG_ VSC_DISABLED : 12|2@0+ (1,0) [0|1] "" XXX
+ SG_ TC_DISABLED : 13|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_LIGHTS_ACC : 18|1@0+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_HOLD_ENABLED : 33|1@1+ (1,0) [0|1] "" XXX
+ SG_ BRAKE_HOLD_ACTIVE : 36|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 956 GEAR_PACKET: 8 XXX
+ SG_ SPORT_ON : 2|1@0+ (1,0) [0|1] "" XXX
+ SG_ GEAR : 13|6@0+ (1,0) [0|63] "" XXX
+ SG_ SPORT_GEAR_ON : 33|1@0+ (1,0) [0|1] "" XXX
+ SG_ SPORT_GEAR : 38|3@0+ (1,0) [0|7] "" XXX
+ SG_ ECON_ON : 40|1@0+ (1,0) [0|1] "" XXX
+ SG_ B_GEAR_ENGAGED : 41|1@0+ (1,0) [0|1] "" XXX
+ SG_ DRIVE_ENGAGED : 47|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 1568 BODY_CONTROL_STATE: 8 XXX
+ SG_ METER_DIMMED : 38|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_RL : 42|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_RR : 43|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_FR : 44|1@0+ (1,0) [0|1] "" XXX
+ SG_ DOOR_OPEN_FL : 45|1@0+ (1,0) [0|1] "" XXX
+ SG_ PARKING_BRAKE : 60|1@0+ (1,0) [0|1] "" XXX
+ SG_ SEATBELT_DRIVER_UNLATCHED : 62|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 1570 LIGHT_STALK: 8 XXX
+ SG_ FRONT_FOG : 27|1@0+ (1,0) [0|1] "" XXX
+ SG_ PARKING_LIGHT : 28|1@0+ (1,0) [0|1] "" XXX
+ SG_ LOW_BEAM : 29|1@0+ (1,0) [0|1] "" XXX
+ SG_ HIGH_BEAM : 30|1@0+ (1,0) [0|1] "" XXX
+ SG_ DAYTIME_RUNNING_LIGHT : 31|1@0+ (1,0) [0|1] "" XXX
+ SG_ AUTO_HIGH_BEAM : 37|1@0+ (1,0) [0|1] "" XXX
+
+BO_ 1592 DOOR_LOCKS: 8 XXX
+ SG_ LOCK_STATUS_CHANGED : 15|1@0+ (1,0) [0|1] "" XXX
+ SG_ LOCK_STATUS : 20|1@0+ (1,0) [0|1] "" XXX
+ SG_ LOCKED_VIA_KEYFOB : 23|1@0+ (1,0) [0|1] "" XXX
+
+CM_ SG_ 37 STEER_RATE "factor is tbd";
+CM_ SG_ 37 STEER_FRACTION "1/15th of the signal STEER_ANGLE, which is 1.5 deg; note that 0x8 is never set";
+CM_ SG_ 548 BRAKE_PRESSURE "seems prop to pedal force";
+CM_ SG_ 865 GAS_PEDAL_ALT "copy of main GAS_PEDAL. Both use 8 bits. Might indicate that this message is for pedals.";
+CM_ SG_ 865 ACC_FAULTED "1 when ACC is faulted and the PCM disallows engagement. Also describes a lockout when the ACC_CONTROL->ACC_MALFUNCTION bit is set.";
+CM_ SG_ 865 CLUTCH_RELEASED "boolean of clutch for 6MT.";
+CM_ SG_ 921 TEMP_ACC_FAULTED "1 when the UI is displaying or playing fault-related alerts or sounds. Also 1 when pressing main on.";
+CM_ SG_ 921 UI_SET_SPEED "set speed shown in the vehicle's UI with the vehicle's unit";
+CM_ SG_ 951 BRAKE_LIGHTS_ACC "brake lights when ACC commands decel";
+CM_ SG_ 956 GEAR "on 6MT, only R shows.";
+CM_ SG_ 1592 LOCK_STATUS_CHANGED "1 on rising edge of lock/unlocking";
+CM_ SG_ 1592 LOCK_STATUS "The next 3 bits always seem to follow this signal.";
+CM_ SG_ 1592 LOCKED_VIA_KEYFOB "1 for as long as car is locked with key fob or door handle touch";
+VAL_ 865 CLUTCH_RELEASED 0 "clutch pressed any amount" 1 "clutch released";
+VAL_ 921 CRUISE_CONTROL_STATE 2 "disabled" 11 "hold" 10 "hold_waiting_user_cmd" 6 "enabled" 5 "faulted";
+VAL_ 956 SPORT_ON 0 "off" 1 "on";
+VAL_ 956 GEAR 0 "D" 1 "S" 8 "N" 16 "R" 32 "P";
+VAL_ 956 SPORT_GEAR_ON 0 "off" 1 "on";
+VAL_ 956 SPORT_GEAR 1 "S1" 2 "S2" 3 "S3" 4 "S4" 5 "S5" 6 "S6";
+VAL_ 956 ECON_ON 0 "off" 1 "on";
+VAL_ 956 B_GEAR_ENGAGED 0 "off" 1 "on";
+VAL_ 956 DRIVE_ENGAGED 0 "off" 1 "on";
+VAL_ 1592 LOCK_STATUS 0 "locked" 1 "unlocked";
