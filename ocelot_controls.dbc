@@ -57,14 +57,16 @@ BO_ 118 SPEED: 8 XXX
  SG_ MODE : 60|4@1+ (1,0) [0|15] "" XXX
  SG_ COUNTER : 56|7@1+ (1,0) [0|15] "" XXX
 
-BO_ 256 CRUISE: 6 XXX
- SG_ ON_OFF : 19|1@0+ (1,0) [0|1] "" XXX
- SG_ RES_UP : 18|1@0+ (1,0) [0|1] "" XXX
- SG_ SET_DOWN : 17|1@0+ (1,0) [0|1] "" XXX
- SG_ CANCEL : 16|1@0+ (1,0) [0|1] "" XXX
- SG_ COUNTER : 40|4@1+ (1,0) [0|15] "" XXX
+BO_ 256 CRUISE: 8 XXX
  SG_ CHECKSUM : 0|8@1+ (1,0) [0|255] "" XXX
- SG_ MODE : 44|4@1+ (1,0) [0|15] "" XXX
+ SG_ CANCEL : 16|1@0+ (1,0) [0|1] "" XXX
+ SG_ SET_DOWN : 17|1@0+ (1,0) [0|1] "" XXX
+ SG_ RES_UP : 18|1@0+ (1,0) [0|1] "" XXX
+ SG_ ON_OFF : 19|1@0+ (1,0) [0|1] "" XXX
+ SG_ ADC_1 : 31|16@0+ (1,0) [0|65535] "" XXX
+ SG_ ADC_2 : 47|16@0+ (1,0) [0|65535] "" XXX
+ SG_ COUNTER : 56|4@1+ (1,0) [0|15] "" XXX
+ SG_ MODE : 60|4@1+ (1,0) [0|15] "" XXX
 
 BO_ 270 ACTUATOR_BRAKE_COMMAND: 6 EON
  SG_ BRAKE_POSITION_COMMAND : 32|12@1+ (0.015625,-5) [-5|47] "mm" BRAKE_ACTUATOR
